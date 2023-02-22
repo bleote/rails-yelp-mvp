@@ -1,0 +1,9 @@
+<div class="container text-center col-8 bg-light py-4">
+  <%= simple_form_for(restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :category, collection: Restaurant::CATEGORY %>
+    <%= f.input :phone_number %>
+    <%= f.input :address %>
+    <%= f.submit "Upload restaurant", class: "btn btn-primary" %>
+  <% end %>
+</div>

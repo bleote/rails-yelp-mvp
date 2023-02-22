@@ -1,0 +1,9 @@
+<div class="container text-center col-8 bg-light py-4">
+  <h1>Restaurants</h1>
+  <ul class="list-unstyled p-2">
+    <% @restaurants.each do |restaurant| %>
+    <li class="p-1"><strong><%= link_to restaurant.name, restaurant_path(restaurant) %></strong>, <%=  restaurant.category %> food</li>
+    <% end %>
+  </ul>
+  <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn-primary p-2 rounded" %>
+</div>
